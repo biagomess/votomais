@@ -1,0 +1,22 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif; /* Fonte do corpo */
+    background: linear-gradient(135deg, #0072cc, #fdfff5); /* Gradiente de fundo */
+    padding: 20px; /* Espaçamento interno do corpo */
+}
+
+/* Estilo do Perfil */
+.perfil {
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    border-radius: 8px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 600px; /* Largura máxima do perfil */
+    margin: auto; /* Centraliza o perfil na tela */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra leve ao redor do perfil */
+}
+
+/* Estilo da Foto do Candidato */
+.foto {
+    width: 150px; /* Largura da foto */
+    border-radius: 5px; /* Cantos levemente arredondados da foto */
+}

@@ -1,0 +1,104 @@
+/* Estilos Gerais */
+body {
+    background-color: #f8f9fa; /* Cor de fundo geral */
+    font-family: 'Poppins', sans-serif; /* Alterado para Poppins conforme a necessidade do projeto */
+    margin: 0; /* Remover margens padrão */
+    padding: 0; /* Remover preenchimento padrão */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima da tela */
+}
+
+/* Estilo do Card de Cadastro */
+.cadastro-card {
+    max-width: 600px; /* Largura máxima do card */
+    width: 100%; /* Largura total dentro do contêiner */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: none; /* Remover borda */
+    background-color: #ffffff; /* Cor de fundo do card */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Logo */
+.logo {
+    width: 80px; /* Largura da logo */
+    height: auto; /* Manter proporção */
+}
+
+/* Título */
+h1 {
+    color: #003366; /* Cor do título */
+    font-weight: bold; /* Negrito */
+    text-align: center; /* Centralizar texto */
+}
+
+/* Estilo dos rótulos (labels) */
+.form-label {
+    color: #333333; /* Cor dos rótulos */
+    font-weight: 500; /* Peso da fonte */
+}
+
+/* Campos de formulário */
+.form-control {
+    border-radius: 4px; /* Bordas arredondadas */
+    border: 1px solid #ced4da; /* Bordas com cor padrão */
+    padding: 10px; /* Preenchimento interno */
+}
+
+.form-control:focus {
+    border-color: #003366; /* Cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(0, 51, 102, 0.2); /* Sombra ao focar */
+}
+
+/* Botões */
+.btn {
+    border-radius: 4px; /* Bordas arredondadas para todos os botões */
+}
+
+/* Estilos específicos de botões */
+.btn-success {
+    background-color: #28a745; /* Verde para sucesso */
+    border-color: #28a745; /* Bordas verdes */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Vermelho para perigo */
+    border-color: #dc3545; /* Bordas vermelhas */
+}
+
+.btn-primary {
+    background-color: #003366; /* Azul escuro */
+    border-color: #003366; /* Bordas azuis */
+}
+
+.btn-info {
+    background-color: #17a2b8; /* Azul claro */
+    border-color: #17a2b8; /* Bordas azuis claras */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Amarelo */
+    border-color: #ffc107; /* Bordas amarelas */
+}
+
+/* Alerta de Erro */
+.alert-danger {
+    font-size: 0.9rem; /* Tamanho da fonte para alerta de erro */
+    color: #721c24; /* Cor do texto */
+    background-color: #f8d7da; /* Cor de fundo do alerta */
+    border-color: #f5c6cb; /* Cor da borda do alerta */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Espaçamento */
+.mt-4 {
+    margin-top: 1.5rem; /* Margem superior */
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem; /* Margem inferior */
+}

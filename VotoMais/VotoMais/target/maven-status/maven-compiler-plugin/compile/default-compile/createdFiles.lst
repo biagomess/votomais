@@ -1,0 +1,12 @@
+com\votomais\controller\AutenticacaoServlet.class
+com\votomais\controller\AvaliacaoServlet.class
+com\votomais\model\Usuario$NivelAcesso.class
+com\votomais\dao\AvaliacaoDAO.class
+com\votomais\model\Candidato.class
+com\votomais\dao\CandidatoDAO.class
+com\votomais\model\Avaliacao.class
+com\votomais\model\Conexao.class
+com\votomais\dao\UsuarioDAO.class
+com\votomais\controller\CandidatoServlet.class
+com\votomais\controller\CadastroUsuarioServlet.class
+com\votomais\model\Usuario.class

@@ -1,0 +1,165 @@
+:root {
+    --cor-primaria: #003366; /* Azul padrão */
+    --cor-hover-primaria: #002855; /* Azul escuro no hover */
+    --cor-secundaria: #6c757d; /* Cinza */
+    --cor-hover-secundaria: #5a6268; /* Cinza escuro no hover */
+    --cor-fundo: #f8f9fa; /* Fundo claro */
+    --cor-texto: #333333; /* Texto padrão */
+    --sombra-primaria: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+    --sombra-hover: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px; /* Largura ajustada para telas maiores */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 3px solid var(--cor-secundaria); /* Borda cinza */
+    border-radius: 10px;
+    box-shadow: var(--sombra-primaria); /* Sombra leve */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: var(--sombra-hover); /* Sombra ao passar o mouse */
+    transform: scale(1.01); /* Leve ampliação */
+}
+
+img.img-fluid {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--cor-secundaria);
+    box-shadow: var(--sombra-primaria);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img.img-fluid:hover {
+    transform: scale(1.1); /* Aumenta a imagem no hover */
+    box-shadow: var(--sombra-hover); /* Sombra mais forte */
+}
+
+.alert-info {
+    background-color: #cce5ff; /* Cor de fundo personalizada */
+    color: #004085; /* Cor do texto */
+    border-color: #b8daff; /* Cor da borda */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.card {
+    border: 2px solid var(--cor-secundaria); /* Borda ao redor do card */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: var(--sombra-primaria); /* Sombra leve */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 20px; /* Espaçamento entre cards */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Elevação no hover */
+    box-shadow: var(--sombra-hover); /* Sombra mais forte */
+}
+
+.card-title {
+    font-weight: bold;
+    color: var(--cor-primaria); /* Título em azul */
+}
+
+.list-group-item {
+    font-size: 1rem;
+    border: none;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--cor-secundaria); /* Separação entre itens */
+}
+
+.list-group-item:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+.list-group-item strong {
+    color: var(--cor-primaria); /* Azul para destaques */
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-hover-primaria);
+    box-shadow: var(--sombra-hover); /* Sombra ao passar o mouse */
+    transform: scale(1.05); /* Leve ampliação */
+}
+
+.btn-secondary {
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-hover-secundaria);
+    box-shadow: var(--sombra-hover);
+    transform: scale(1.05);
+}
+
+textarea {
+    resize: none; /* Remove redimensionamento */
+    border: 2px solid var(--cor-secundaria); /* Borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px; /* Espaçamento interno */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    border-color: var(--cor-primaria); /* Borda azul no foco */
+    outline: none; /* Remove borda padrão */
+    box-shadow: var(--sombra-hover); /* Sombra azul no foco */
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    img.img-fluid {
+        width: 140px; /* Imagem menor em telas menores */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Botões menores */
+    }
+}
+
+@media (max-width: 480px) {
+    img.img-fluid {
+        width: 120px; /* Imagem ainda menor */
+    }
+
+    .btn {
+        font-size: 0.85rem; /* Ajuste no tamanho dos botões */
+    }
+}

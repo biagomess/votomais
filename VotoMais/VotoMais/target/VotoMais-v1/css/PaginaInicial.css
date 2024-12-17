@@ -1,0 +1,128 @@
+/* Definição de Variáveis CSS */
+:root {
+    --primary-color: #004080; /* Azul escuro atualizado */
+    --secondary-color: #28a745; /* Verde para botões de sucesso */
+    --muted-color: #6c757d; /* Cinza para texto secundário */
+    --highlight-color: #ffcc00; /* Amarelo para destaque */
+    --light-color: #ffffff; /* Branco */
+    --background-color: #f8f9fa; /* Cor de fundo */
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Tamanho da fonte base */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    color: #333; /* Cor do texto padrão */
+    background-color: var(--background-color); /* Cor de fundo */
+}
+
+/* Logo da Navbar */
+.navbar-brand .logo {
+    width: 30px; /* Largura da logo */
+    height: auto; /* Altura automática para manter a proporção */
+    margin-right: 10px; /* Espaço à direita da logo */
+}
+
+/* Cabeçalho */
+.navbar, .footer {
+    background-color: var(--primary-color); /* Cor de fundo para navbar e footer */
+}
+
+/* Título e Texto Principal */
+h1 {
+    color: var(--primary-color); /* Cor do título */
+    font-weight: bold; /* Negrito para o título */
+    margin-top: 20px; /* Margem superior */
+}
+
+.text-muted {
+    color: var(--muted-color); /* Cor para texto secundário */
+}
+
+/* Links da Navbar */
+.navbar .nav-link,
+.navbar .navbar-text,
+.footer p {
+    color: var(--light-color); /* Cor do texto na navbar e footer */
+}
+
+.nav-link:hover {
+    color: var(--highlight-color); /* Cor de destaque ao passar o mouse */
+}
+
+/* Botões */
+.btn-outline-light {
+    color: var(--light-color); /* Cor do texto do botão */
+    border-color: var(--light-color); /* Cor da borda do botão */
+}
+
+.btn-outline-light:hover {
+    background-color: var(--light-color); /* Cor de fundo ao passar o mouse */
+    color: var(--primary-color); /* Cor do texto ao passar o mouse */
+}
+
+.btn-success {
+    background-color: var(--secondary-color); /* Cor de fundo do botão de sucesso */
+    border-color: var(--secondary-color); /* Cor da borda do botão */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Cor de fundo do botão secundário */
+    border-color: #6c757d; /* Cor da borda do botão secundário */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Cor de fundo do botão primário */
+    border-color: #007bff; /* Cor da borda do botão primário */
+}
+
+/* Cards dos Candidatos */
+.card {
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o card */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais intensa ao passar o mouse */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Tamanho da fonte do título do card */
+    color: var(--primary-color); /* Cor do título do card */
+}
+
+.card-text {
+    color: #333333; /* Cor do texto do card */
+}
+
+.text-decoration-none {
+    color: inherit; /* Mantém a cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.text-decoration-none:hover {
+    color: var(--highlight-color); /* Cor de destaque ao passar o mouse nos links */
+}
+
+/* Estilo para a barra de navegação */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--primary-color); /* Cor de fundo do footer */
+    color: var(--light-color); /* Cor do texto do footer */
+    padding: 15px 0; /* Espaçamento vertical */
+    text-align: center; /* Centraliza o texto */
+}
+
+.footer p {
+    margin: 0; /* Remove margem padrão */
+    font-size: 0.9rem; /* Tamanho da fonte no footer */
+}

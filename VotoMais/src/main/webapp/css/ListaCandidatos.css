@@ -1,0 +1,195 @@
+/* ==============================
+   VARIÁVEIS DE CORES
+   ============================== */
+:root {
+    --cor-primaria: #003366; /* Azul padrão */
+    --cor-hover-primaria: #002855; /* Azul escuro no hover */
+    --cor-secundaria: #6c757d; /* Cinza */
+    --cor-hover-secundaria: #5a6268; /* Cinza escuro no hover */
+
+    --cor-fundo: #f8f9fa; /* Fundo claro */
+    --cor-texto: #333333; /* Texto padrão */
+    --cor-borda: #dcdcdc; /* Borda padrão */
+    --cor-alerta-erro: #721c24; /* Vermelho */
+    --cor-sucesso: #28a745; /* Verde */
+
+    --sombra-primaria: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra padrão */
+    --sombra-hover: 0 15px 30px rgba(0, 0, 0, 0.7); /* Sombra no hover */
+}
+
+/* ==============================
+   RESET E ESTILOS GERAIS
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==============================
+   BOTÕES
+   ============================== */
+/* Botões */
+
+/* Tamanho Consistente para Botões */
+.btn-sm {
+    padding: 10px 15px; /* Definindo o mesmo padding para os botões */
+    font-size: 1rem; /* Tamanho da fonte igual para os dois botões */
+}
+
+.btn {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 15px; /* Este é o tamanho do botão */
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--cor-hover-primaria);
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Botão Voltar */
+.btn-primary {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-hover-primaria);
+}
+
+/* ==============================
+   ESTILO DA TABELA
+   ============================== */
+
+/* Tabela principal */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Junta as bordas */
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 3px solid var(--cor-primaria); /* Contorno azul ao redor da tabela */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombreamento para destaque */
+    overflow: hidden; /* Garante bordas arredondadas */
+}
+
+/* Cabeçalho da tabela */
+table th {
+    background-color: var(--cor-primaria); /* Fundo azul escuro */
+    color: #ffffff; /* Texto branco */
+    font-weight: bold;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    padding: 10px;
+    border: 1px solid var(--cor-primaria); /* Bordas no cabeçalho */
+    text-align: center;
+}
+
+/* Estilização específica para a célula "ID" no cabeçalho */
+table th:first-child {
+    background-color: #002855; /* Fundo azul mais escuro */
+    color: #ffffff; /* Texto branco */
+    font-weight: bold;
+    text-align: center;
+}
+
+table th:nth-child(2) { /* NOME */
+    background-color: #002855; /* Fundo azul mais escuro */
+    color: #ffffff; /* Texto branco */
+    font-weight: bold;
+    text-align: center;
+}
+
+table th:nth-child(3) { /* IDADE */
+      background-color: #002855; /* Fundo azul mais escuro */
+    color: #ffffff; /* Texto branco */
+    font-weight: bold;
+    text-align: center;
+}
+
+table th:nth-child(4) { /* CARGO POLÍTICO */
+    background-color: #002855; /* Fundo azul mais escuro */
+    color: #ffffff; /* Texto branco */
+    font-weight: bold;
+    text-align: center;
+}
+
+table th:nth-child(5) { /* PARTIDO */
+    background-color: #002855; /* Fundo azul mais escuro */
+    color: #ffffff; /* Texto branco */
+    font-weight: bold;
+    text-align: center;
+}
+
+table th:nth-child(6) { /* NOME-VICE */
+    background-color: #002855; /* Fundo azul mais escuro */
+    color: #ffffff; /* Texto branco */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Células da tabela */
+table td {
+    color: var(--cor-texto); /* Texto padrão */
+    padding: 10px;
+    border: 1px solid var(--cor-primaria); /* Bordas entre as células */
+    text-align: center; /* Centraliza conteúdo horizontalmente */
+    vertical-align: middle; /* Centraliza conteúdo verticalmente */
+}
+
+/* Linhas alternadas no corpo */
+table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Fundo cinza claro para linhas pares */
+}
+
+/* Linha ao passar o mouse */
+table tbody tr:hover {
+    background-color: #e9ecef; /* Fundo mais escuro ao hover */
+    transition: background-color 0.3s ease;
+}
+
+/* ==============================
+   CONTAINER
+   ============================== */
+.container {
+    max-width: 1000px; /* Largura máxima do contêiner */
+    margin: 40px auto; /* Centraliza o contêiner */
+    padding: 20px; /* Espaçamento interno */
+    background: #fff; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 3px solid var(--cor-primaria); /* Contorno azul ao redor do container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombreamento */
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 0.9rem; /* Reduz tamanho do texto */
+    }
+}

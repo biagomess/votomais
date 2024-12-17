@@ -1,0 +1,127 @@
+/* ==============================
+   CSS GLOBAL AJUSTADO
+   ============================== */
+:root {
+    --cor-primaria: #003366;
+    --cor-hover-primaria: #002855;
+    --cor-secundaria: #6c757d;
+    --cor-hover-secundaria: #5a6268;
+    --cor-fundo: #f8f9fa;
+    --cor-texto: #333333;
+    --cor-alerta-erro: #721c24;
+    --cor-sucesso: #28a745;
+    --sombra-primaria: 0 5px 10px rgba(0, 0, 0, 0.2);
+    --sombra-hover: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e Configurações Globais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ==============================
+   TÍTULO
+   ============================== */
+h1 {
+    text-align: center;
+    font-size: 2rem; /* Tamanho do título */
+    color: var(--cor-primaria); /* Cor do texto */
+    background-color: var(--cor-fundo); /* Cor de fundo do título */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+    box-shadow: var(--sombra-primaria); /* Sombra para dar destaque */
+    text-transform: uppercase; /* Coloca as letras em maiúsculas */
+    width: 100%; /* Garante que o título ocupe toda a largura */
+    margin-top: 20px; /* Garante um espaço superior */
+}
+
+/* ==============================
+   FORMULÁRIO DE ASSOCIAÇÃO
+   ============================== */
+form {
+    display: flex; /* Flexbox para organizar os elementos verticalmente */
+    flex-direction: column; /* Organiza os campos de forma vertical */
+    gap: 20px; /* Espaço entre os campos */
+    width: 100%;
+    max-width: 500px; /* Tamanho máximo do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+    background-color: #fff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: var(--sombra-primaria); /* Sombra para dar destaque */
+}
+
+/* Estilo para os campos de input e botões */
+input[type="text"], button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 5px;
+}
+
+/* Estilo para os botões */
+button {
+    padding: 10px 20px; /* Espaçamento dentro do botão */
+    font-size: 1rem; /* Tamanho do texto */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Indica que o botão é clicável */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
+/* Botões com cor primária */
+button[type="submit"] {
+    background-color: var(--cor-primaria); /* Cor de fundo do botão "Associar" */
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--cor-hover-primaria); /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Efeito de ampliação ao passar o mouse */
+}
+
+/* Botão Voltar */
+button {
+    background-color: var(--cor-secundaria); /* Cor de fundo do botão "Voltar" */
+}
+
+button:hover {
+    background-color: var(--cor-hover-secundaria); /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Efeito de ampliação ao passar o mouse */
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+@media (max-width: 768px) {
+    form {
+        width: 90%; /* O formulário ocupa 90% da largura em telas pequenas */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduz o tamanho do título em telas pequenas */
+    }
+
+    input[type="text"], button {
+        padding: 8px; /* Diminui o padding em telas menores */
+    }
+}
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    .voltar-btn {
+        width: 100%; /* Faz o botão ocupar toda a largura do formulário em telas pequenas */
+    }
+}

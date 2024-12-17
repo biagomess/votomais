@@ -1,0 +1,229 @@
+/* ==============================
+   CSS GLOBAL - Login
+   ==============================
+   Este arquivo contém todas as definições de estilo para o site,
+   incluindo variáveis, estilos gerais, botões, formulários, componentes
+   e regras de responsividade.
+*/
+
+/* ==============================
+   VARIÁVEIS DE CORES
+   ==============================
+   Centralizam as configurações de cores e valores reutilizáveis.
+*/
+:root {
+    --cor-primaria: #003366; /* Azul padrão para elementos principais */
+    --cor-hover-primaria: #002855; /* Azul mais escuro para hover */
+    --cor-secundaria: #6c757d; /* Cinza para elementos secundários */
+    --cor-hover-secundaria: #5a6268; /* Cinza mais escuro no hover */
+
+    --cor-fundo: #f8f9fa; /* Fundo claro padrão */
+    --cor-texto: #333333; /* Cor padrão do texto */
+    --cor-alerta-erro: #721c24; /* Vermelho para mensagens de erro */
+    --cor-fundo-alerta: #f8d7da; /* Fundo para alertas de erro */
+    --cor-sucesso: #28a745; /* Verde para mensagens de sucesso */
+
+    --cor-borda-preta: #000000; /* Preto usado para bordas destacadas */
+
+    --sombra-primaria: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra padrão */
+    --sombra-hover: 0 15px 30px rgba(0, 0, 0, 0.7); /* Sombra mais forte no hover */
+}
+
+/* ==============================
+   RESET E ESTILOS GERAIS
+   ==============================
+   Define configurações básicas para layout e remoção de estilos padrão.
+*/
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamento interno padrão */
+    box-sizing: border-box; /* Garante que largura e altura incluam bordas */
+}
+
+/* Configurações para o corpo da página */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e legível */
+    border: 3px solid var(--cor-secundaria); /* Borda cinza */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: var(--cor-fundo); /* Fundo padrão claro */
+    color: var(--cor-texto); /* Texto padrão em cinza escuro */
+    line-height: 1.6; /* Altura das linhas para melhorar a leitura */
+}
+
+/* Estilo para links */
+a {
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--cor-primaria); /* Azul padrão para links */
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+a:hover {
+    color: var(--cor-hover-primaria); /* Azul mais escuro no hover */
+}
+
+/* ==============================
+   BOTÕES
+   ==============================
+   Estilos reutilizáveis para botões principais e secundários.
+*/
+.btn {
+    background-color: var(--cor-primaria); /* Azul padrão */
+    color: #fff; /* Texto branco */
+    font-size: 1rem; /* Tamanho do texto */
+    font-weight: bold; /* Texto em negrito */
+    border: 3px solid var(--cor-secundaria); /* Borda cinza */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px 15px; /* Espaçamento interno */
+    cursor: pointer; /* Mostra o ponteiro de clique */
+    transition: all 0.3s ease; /* Suaviza transições */
+    text-align: center; /* Centraliza texto */
+    display: inline-block; /* Permite espaçamento lateral */
+}
+
+.btn:hover {
+    background-color: var(--cor-hover-primaria); /* Azul mais escuro no hover */
+    transform: scale(1.05); /* Leve ampliação */
+    box-shadow: var(--sombra-hover); /* Adiciona sombra */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Reduz tamanho ao clicar */
+}
+
+/* Botão secundário com cores cinzas */
+.btn-secondary {
+    background-color: var(--cor-secundaria); /* Fundo cinza */
+    border-color: var(--cor-hover-secundaria); /* Borda cinza mais escura */
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-hover-secundaria); /* Fundo cinza mais escuro no hover */
+}
+
+/* ==============================
+   FORMULÁRIOS
+   ==============================
+   Estilos para formulários, campos de entrada e rótulos.
+*/
+.form-group {
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    margin-bottom: 1.5rem; /* Espaçamento entre grupos */
+}
+
+.form-label {
+    font-size: 1rem; /* Tamanho do texto */
+    font-weight: bold; /* Negrito */
+    color: var(--cor-texto); /* Cor padrão do texto */
+    margin-bottom: 0.5rem; /* Espaçamento entre rótulo e campo */
+    display: block; /* Rótulo ocupa toda a linha */
+}
+
+.form-control {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 1rem; /* Texto legível */
+    color: var(--cor-texto); /* Cor padrão */
+    border: 2px solid var(--cor-secundaria); /* Borda cinza padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: all 0.3s ease; /* Transições suaves */
+}
+
+/* Foco nos campos de entrada */
+.form-control:focus {
+    border-color: var(--cor-primaria); /* Borda azul no foco */
+    box-shadow: 0 0 10px rgba(0, 51, 102, 0.5); /* Sombra azulada */
+    outline: none; /* Remove contorno padrão */
+}
+
+/* Placeholder dos campos */
+.form-control::placeholder {
+    color: var(--cor-secundaria); /* Placeholder em cinza */
+    opacity: 1; /* Totalmente visível */
+}
+
+/* ==============================
+   COMPONENTES REUTILIZÁVEIS
+   ==============================
+   Contêineres e caixas com sombras e cantos arredondados.
+*/
+.box {
+    background: #fff; /* Fundo branco */
+    border-radius: 7px; /* Cantos arredondados */
+    box-shadow: var(--sombra-primaria); /* Sombra padrão */
+    padding: 20px; /* Espaçamento interno */
+    transition: all 0.3s ease; /* Suaviza mudanças ao interagir */
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Leve movimento para cima */
+    box-shadow: var(--sombra-hover); /* Sombra mais forte no hover */
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ==============================
+   Ajustes para diferentes tamanhos de tela.
+*/
+@media screen and (max-width: 768px) {
+    body {
+        line-height: 1.4; /* Reduz altura das linhas em telas menores */
+    }
+
+    .btn,
+    .form-control {
+        width: 100%; /* Botões e campos ocupam toda a largura */
+    }
+
+    .box {
+        padding: 15px; /* Reduz espaçamento interno */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 90%; /* Reduz tamanho das fontes */
+    }
+
+    .btn {
+        padding: 8px 10px; /* Ajusta tamanho dos botões */
+    }
+}
+
+/* ==============================
+   CSS Erro Antigo
+   ==============================
+   Ajustes para diferentes tamanhos de tela.
+*/
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.error-container {
+    background-color: #fff;
+    padding: 30px;
+    border: 3px solid var(--cor-secundaria); /* Borda cinza */
+    border-radius: 5px; /* Cantos arredondados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+.error-container h1 {
+    color: #dc3545;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.error-container p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.btn-primary {
+    text-transform: uppercase;
+    font-weight: bold;
+}

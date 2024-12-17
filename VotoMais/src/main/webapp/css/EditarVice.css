@@ -1,0 +1,162 @@
+/* ==============================
+   VARIÁVEIS DE CORES
+   ============================== */
+:root {
+    --cor-primaria: #003366; /* Azul padrão */
+    --cor-hover-primaria: #002855; /* Azul mais escuro no hover */
+    --cor-secundaria: #6c757d; /* Cinza padrão */
+    --cor-hover-secundaria: #5a6268; /* Cinza escuro no hover */
+
+    --cor-fundo: #f8f9fa; /* Fundo claro */
+    --cor-texto: #333333; /* Texto padrão */
+    --cor-alerta-erro: #721c24; /* Vermelho para mensagens de erro */
+    --cor-fundo-alerta: #f8d7da; /* Fundo para alertas */
+    --cor-sucesso: #28a745; /* Verde para mensagens de sucesso */
+    --sombra-primaria: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+    --sombra-hover: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra hover */
+}
+
+/* ==============================
+   RESET E ESTILOS GERAIS
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ==========================
+   CONTAINER
+   ========================== */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #6c757d;
+}
+
+h2 {
+    text-align: center;
+    color: var(--cor-texto);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   FORMULÁRIOS MELHORADOS
+   ========================== */
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border: 2px solid #6c757d;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #003366;
+    box-shadow: 0 0 5px rgba(0, 51, 102, 0.3);
+}
+
+textarea.form-control {
+    resize: none; /* Remove redimensionamento */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   BOTÕES PADRONIZADOS
+   ========================== */
+.btn-primary {
+    width: 100%; /* Define largura total para todos os botões */
+    background-color: #003366; /* Azul escuro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.btn-primary:hover {
+    background-color: #002855;
+    transform: scale(1.02);
+}
+
+.w-100 {
+    width: 41%; /* Ocupa 100% da largura */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #6c757d;
+}
+
+.w-48 {
+    width: 41%; /* Cada botão ocupa 41% da largura no modo flex */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #6c757d;
+}
+
+
+/* Botão para alertas */
+.alert {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-danger {
+    background-color: var(--cor-fundo-alerta);
+    color: var(--cor-alerta-erro);
+    border: 2px solid var(--cor-alerta-erro);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+@media (max-width: 768px) {
+    .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

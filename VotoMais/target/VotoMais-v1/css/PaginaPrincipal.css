@@ -1,0 +1,315 @@
+/* ==============================
+   VARIÁVEIS DE CORES
+   ============================== */
+:root {
+    --cor-principal: #003366; /* Azul principal */
+    --cor-hover-principal: #002855; /* Azul mais escuro para hover */
+    --cor-secundaria: #6c757d; /* Cinza para elementos secundários */
+    --cor-hover-secundaria: #5a6268; /* Cinza mais escuro no hover */
+
+    --cor-fundo: #f8f9fa; /* Fundo claro */
+    --cor-texto: #333333; /* Cor padrão do texto */
+    --cor-alerta-erro: #721c24; /* Vermelho para mensagens de erro */
+    --cor-sucesso: #28a745; /* Verde para mensagens de sucesso */
+
+    --sombra-padrao: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra padrão */
+    --sombra-hover: 0 15px 30px rgba(0, 0, 0, 0.7); /* Sombra mais forte no hover */
+}
+
+/* ==============================
+   RESET E CONFIGURAÇÕES GERAIS
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ==============================
+   CABEÇALHO FIXO
+   ============================== */
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 2px solid var(--cor-secundaria);
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.titulo-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-principal);
+}
+
+.botoes-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre os itens */
+}
+
+.nome-usuario {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    margin-right: 10px;
+}
+
+.botao {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-primario {
+    background-color: var(--cor-principal);
+}
+
+.botao-primario:hover {
+    background-color: var(--cor-hover-principal);
+    transform: scale(1.05);
+}
+
+.botao-secundario {
+    background-color: var(--cor-secundaria);
+}
+
+.botao-secundario:hover {
+    background-color: var(--cor-hover-secundaria);
+}
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+   ============================== */
+.conteudo-principal {
+    position: relative; /* Permite posicionamento absoluto de elementos internos */
+    margin-top: 150px; /* Espaço abaixo do cabeçalho */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os cartões à esquerda */
+    gap: 20px; /* Espaçamento entre elementos */
+    padding: 20px;
+}
+
+/* ==============================
+   CARTÃO DO CANDIDATO
+   ============================== */
+.cartao {
+    position: relative; /* Permite animação relativa */
+    top: 100px; /* Ajuste para posicionar abaixo do cabeçalho */
+    left: 50px; /* Ajuste horizontal (esquerda da tela) */
+    background: #fff;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+    border: 2px solid; /* Sem borda inicialmente */
+    width: 400px; /* Largura fixa para os cartões */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+/* Animação ao passar o mouse */
+.cartao:hover {
+    transform: translateY(-10px); /* Eleva o cartão */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    border: 2px solid var(--cor-principal); /* Adiciona borda com destaque */
+}
+
+/* Adiciona brilho ao cartão durante a interação */
+.cartao:active {
+    transform: scale(0.98); /* Leve redução no clique */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Reduz a sombra */
+}
+
+.cartao-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.cartao-texto {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Aplicação do efeito de pulso ao cartão no hover */
+.cartao:hover {
+    animation: pulse 1s infinite;
+}
+
+/* ==============================
+   TÍTULO DA LISTA DE CANDIDATOS
+   ============================== */
+
+.lista-candidatos {
+    display: flex; /* Ativa o Flexbox */
+    flex-wrap: wrap; /* Permite que os cartões ocupem várias linhas */
+    gap: 20px; /* Espaçamento entre os cartões */
+    justify-content: center; /* Centraliza os cartões horizontalmente */
+    align-items: stretch; /* Faz com que todos os cartões tenham a mesma altura */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+
+/* Cartão do Candidato */
+.cartao {
+    flex: 1 1 calc(33.333% - 20px); /* Cada cartão ocupa 1/3 da largura disponível, com espaçamento */
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--cor-secundaria);
+    max-width: 300px; /* Limita a largura máxima */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animação no hover */
+.cartao:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    border-color: var(--cor-principal);
+}
+
+.conteiner-candidatos {
+    margin-bottom: 50px; /* Aumente o valor conforme necessário */
+    max-width: 1200px; /* Limite de largura do contêiner */
+    margin: 0px auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0px 50px; /* Adiciona espaço interno */
+}
+
+/* Título do Cartão */
+.cartao-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+/* Texto do Cartão */
+.cartao-texto {
+    font-size: 1rem;
+    color: #666;
+}
+
+.titulo-candidatos {
+    position: absolute;
+    top: 0px; /* Ajuste para posicionar abaixo do cabeçalho */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar */
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cor-principal);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    z-index: 10; /* Garante que o título fique sobre outros elementos */
+    animation: fadeIn 1s ease; /* Animação suave de entrada */
+}
+
+/* ==============================
+   RODAPÉ FIXO
+   ============================== */
+.rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    border-top: 1px solid var(--cor-secundaria);
+}
+
+/* ==============================
+   BOTÕES
+   ============================== */
+.botao {
+    background-color: var(--cor-principal);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.botao:hover {
+    background-color: var(--cor-hover-principal);
+    transform: scale(1.05);
+}
+
+.botao-primario {
+    background-color: var(--cor-principal);
+}
+
+.botao-secundario {
+    background-color: var(--cor-secundaria);
+}
+
+.botao-perigo {
+    background-color: #dc3545;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+@media screen and (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    .conteudo-principal {
+        max-width: 100%;
+        top: 140px;
+        padding: 15px;
+    }
+
+    .rodape {
+        height: 50px;
+        font-size: 0.8rem;
+    }
+}
